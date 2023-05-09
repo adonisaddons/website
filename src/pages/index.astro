@@ -1,0 +1,33 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="bg-black text-white">
+    <div class="h-4 bg-purple-700"></div>
+
+    <div class="max-w-4xl mx-auto py-16">
+      <Header title={SITE_TITLE} />
+      <main class="my-16">
+        <h1>Ahoy hoy!</h1>
+        <p class="my-4">Welcome to Adonis Addons. A collection of packages for AdonisJS that add extra functionality.</p>
+
+		<!-- Packakges -->
+        <div>
+          <p style="font-weight: 600">Commands</p>
+          <ul class="mt-2">
+            <li><a href="https://github.com/adonisaddons/docs" class="text-purple-500 underline">"Docs"</a> - Quickly access AdonisJS documentation</li>
+          </ul>
+        </div>
+      </main>
+    </div>
+    <Footer />
+  </body>
+</html>
